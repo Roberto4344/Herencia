@@ -32,8 +32,9 @@ public class Menu {
 
 			/** Aqui agregamos un socio nuevo */
 			case 1:
+
 				System.out.println("Introduce el nombre");
-				sc.next();
+				sc.nextLine();
 				String nombre = sc.nextLine();
 
 				System.out.println("Introduce el apellido1");
@@ -183,7 +184,7 @@ public class Menu {
 					String lineaFichero = persona.getId() + ";" + persona.getNombre() + ";" + persona.getApellido1()
 							+ ";" + persona.getApellido2() + ";" + persona.getDni() + ";" + (persona.isAlta() ? 1 : 0)
 							+ ";" + persona.getEdad() + ";" + ((Socio) persona).getCuota() + ";";
-					fileWriter.write(lineaFichero);
+					fileWriter.write(lineaFichero + "\n");
 				}
 			}
 
