@@ -32,7 +32,7 @@ public class Menu {
 
 			/** Aqui agregamos un socio nuevo */
 			case 1:
-
+				System.out.println("Intruduce los siguientes datos");
 				System.out.println("Introduce el nombre");
 				String nombre = sc.nextLine();
 
@@ -75,7 +75,7 @@ public class Menu {
 
 				System.out.println("Introduce el ID del socio");
 				int id = sc.nextInt();
-				editarSocio(id-1);
+				editarSocio(id);
 
 				break;
 
@@ -200,10 +200,11 @@ public class Menu {
 
 	/** Este metodo permite editar el socio en este caso el alta */
 	private void editarSocio(int id) {
-		Persona persona = listaPersonas.get(id);
+		int indice = id-1;
+		Persona persona = listaPersonas.get(indice);
 
 		persona.setAlta(false);
 
-		listaPersonas.set(id, persona);
+		listaPersonas.set(indice, persona);
 	}
 }
