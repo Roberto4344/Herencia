@@ -32,8 +32,8 @@ public class Menu {
 
 			/** Aqui agregamos un socio nuevo */
 			case 1:
-				System.out.println("Intruduce los siguientes datos");
 				System.out.println("Introduce el nombre");
+				sc.next();
 				String nombre = sc.nextLine();
 
 				System.out.println("Introduce el apellido1");
