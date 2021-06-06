@@ -32,7 +32,7 @@ public class Menu {
 
 			/** Aqui agregamos un socio nuevo */
 			case 1:
-				int edad = 0;
+
 				System.out.println("Introduce el nombre");
 				String nombre = sc.nextLine();
 
@@ -45,6 +45,7 @@ public class Menu {
 				System.out.println("Introduce el dni");
 				String dni = sc.nextLine();
 
+				int edad = 0;
 				try {
 					System.out.println("Introduce la Edad");
 					edad = sc.nextInt();
@@ -74,7 +75,7 @@ public class Menu {
 
 				System.out.println("Introduce el ID del socio");
 				int id = sc.nextInt();
-				editarSocio(id);
+				editarSocio(id-1);
 
 				break;
 
